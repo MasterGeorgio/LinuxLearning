@@ -56,8 +56,6 @@ drwxrwxr-x 2 george george 4096 сен 21 23:21 09
 drwxrwxr-x 2 george george 4096 сен 21 23:21 10
 drwxrwxr-x 2 george george 4096 сен 21 23:21 11
 drwxrwxr-x 2 george george 4096 сен 21 23:21 12
-george@george:~/Рабочий стол/LinuxLearning/Lesson6$ ls -l Ex2/2017/0
-01/ 02/ 03/ 04/ 05/ 06/ 07/ 08/ 09/ 
 george@george:~/Рабочий стол/LinuxLearning/Lesson6$ ls -l Ex2/2017/11
 итого 20
 -rw-rw-r-- 1 george george 13 сен 21 23:22 001.txt
@@ -112,5 +110,21 @@ dr-xr-xr-x
 lrwxrwxrwx
 -rw-------
 итого
+
+#-------------------------------------------------------------------------------------------------------------------
+# 4. Используя grep, проанализировать файл /var/log/syslog, отобрав события на своё усмотрение.
+#Command and results:
+george@george:~$ cat /var/log/syslog | grep "cryptographic"
+Sep 22 21:03:41 george systemd[1409]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Sep 22 21:03:41 george systemd[1409]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+Sep 22 21:03:41 george systemd[1409]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Sep 22 21:03:41 george systemd[1409]: Listening on GnuPG cryptographic agent and passphrase cache.
+
+#-------------------------------------------------------------------------------------------------------------------
+# 5. Создать разовое задание на перезагрузку операционной системы, используя at.
+echo "shutdown -h now " | at -m 23:55
+
+------------------------------------
+# 6. Написать скрипт, делающий архивную копию каталога etc, и прописать задание в crontab.
 
 
