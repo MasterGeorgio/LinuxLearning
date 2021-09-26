@@ -1,9 +1,9 @@
 # 1. Подключить репозиторий с nginx любым удобным способом,
 установить nginx и потом удалить nginx, используя утилиту dpkg.
 
-'''
-george@george:~/Рабочий стол/LinuxLearning/Lesson8$ sudo apt-add-repository ppa:nginx/stable
-'''
+```python
+george@george:~/Рабочий стол/LinuxLearning/Lesson8$ sudo apt-add-repository ppa:nginx/stable'
+```
 
  This PPA contains the latest Stable Release version of the nginx web server software.
 
@@ -39,22 +39,22 @@ and uploads for those will not be available until actual final releases for thos
 Получено 4 361 kB за 12с (371 kB/s)                                                                                 
 Чтение списков пакетов… Готово
 
-'''
+```jpython
 cat /etc/apt/sources.list.d/nginx-ubuntu-stable-focal.list
-'''
+```
 
 deb http://ppa.launchpad.net/nginx/stable/ubuntu focal main
 # deb-src http://ppa.launchpad.net/nginx/stable/ubuntu focal main
 
-'''
+```python
 george@george:~$ sudo apt install nginx -y
-'''
 
-'''
 sudo dpkg -r nginx
-'''
+```
 
 # 2. Установить пакет на свой выбор, используя snap.
 
+```python
 sudo snap find telegram
 sudo snap install telegram-desktop
+```
