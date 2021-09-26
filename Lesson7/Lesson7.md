@@ -91,8 +91,10 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination 
 
+
 # 4. Настроить проброс портов локально с порта 80 на порт 8080.
 ```python
-
+// Возможно так?
+sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
 
